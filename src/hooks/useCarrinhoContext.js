@@ -49,6 +49,8 @@ export const useCarrinhoContext = () => {
 	}
 
    function removerProdutoCarrinho(id) {
+      // Aqui utilizaremos o filter, para criar um  novo array com todos os produtos na lista do carrinho, assim vamos fazer uma função que vai retornar(receber/ter) a comparação do id do item do carrinho com o id do parametro, retornando o que não for igual ao que já está lá, ou seja, retirando ele da lista, assim fazendo a função de excluir.
+      // Basicamente ele vai comparar o id que foi passado como parametro atraves do click no item, com o id do item atual, se for igual, ele vai retornar todos os itens anteriores, menos o que for igual
       const produto = carrinho.filter((itemDoCarrinho) => itemDoCarrinho.id !== id);
       setCarrinho(produto)
    }
